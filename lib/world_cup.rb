@@ -15,4 +15,18 @@ class WorldCup
     end
     active_players.flatten
   end
+
+  def all_positions
+    positions = []
+    @teams.each {|team| team.players.each { |player| positions << player.position }}
+    positions.uniq
+  end
+
+  def all_players_by_position
+    result = {}
+    all_positions.each do |position|
+      result[position] = active_players_by_position(position)
+    end
+    result
+  end
 end
