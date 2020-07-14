@@ -26,7 +26,6 @@ pry(main)> player.name
 pry(main)> player.position
 # => "midfielder"
 ```
-
 ## Iteration 2
 
 Use TDD to create a `Team` class that responds to the following interaction pattern:
@@ -126,11 +125,13 @@ pry(main)> world_cup.teams
 
 pry(main)> world_cup.active_players_by_position("midfielder")
 # => [#<Player:0x00007f936c035eb0...>, #<Player:0x00007f936a3595f8...>]
+# => pogba, modric
 
 pry(main)> croatia.eliminated = true    
 
 pry(main)> world_cup.active_players_by_position("midfielder")
 # => [#<Player:0x00007f936c035eb0...>]
+# => pogba
 ```
 
 ## Iteration 4
